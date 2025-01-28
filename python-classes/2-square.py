@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Class Sqaure that efines a class Square
+Class Square that defines a class Square
 """
 
 
@@ -18,7 +18,7 @@ class Square:
         Initializes the square with a private instance attribute: size
 
         Args:
-            size (nt): Size of the square
+            size (int): Size of the square
 
         Raises:
             TypeError: If size is not an integer
