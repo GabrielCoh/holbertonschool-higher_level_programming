@@ -15,11 +15,13 @@ def MyList(list):
         test file is 1-my_list.txt in the tests directory
     """
     def sum(self):
+        """Prints list"""
         if not all(isinstance(e, int) for e in self):
             raise TypeError("element must be an integer")
         return sum(i * e for i, e in enumerate(self))
 
     def print_sorted(self):
+        """Prints sorted list"""
         if not all(isinstance(e, int) for e in self):
             raise TypeError("element must be an integer")
         print(sorted(self))

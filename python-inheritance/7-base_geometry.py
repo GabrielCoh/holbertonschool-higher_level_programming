@@ -5,7 +5,11 @@ Module that writes a class BaseGeometry
 
 
 class BaseGeometry:
+    """A BaseGeometry class"""
+
+
     def area(self):
+        """This is an exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
