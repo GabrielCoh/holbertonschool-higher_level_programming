@@ -8,7 +8,8 @@ otherwise False
 
 def inherits_from(obj, a_class):
     """
-    Prints if the object is an instance that inherited through the specified class
+    Prints if the object is an instance that inherited
+    through the specified class
 
     Args:
         obj: the object to compare
