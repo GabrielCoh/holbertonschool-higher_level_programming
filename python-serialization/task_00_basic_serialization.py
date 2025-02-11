@@ -7,7 +7,7 @@ to recreate the Python Dictionary"""
 import json
 
 
-def serialize_and_save_to_file(date, filename):
+def serialize_and_save_to_file(data, filename):
     """Serialize a Python dictionnary to a JSON file"""
     with open(filename, "w+", encoding="utf-8") as f:
         data= json.dumps(data)
