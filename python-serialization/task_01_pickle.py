@@ -31,8 +31,10 @@ class CustomObject:
         """Deserialize the JSON file to recreate the Python dictionnary"""
         try:
             with open(filename, "rb") as file:
-                loaded_object = pickle.load(file)
-                return loaded_object
+                obj = pickle.load(file)
+                if not isinstance(obj, cls):
+                    raise TypeError("Object is not of type CustomObject")
+                return obj
             except (FileNotFoundError, pickle.UnpicklingError, EOFError) as e:
                 print("Deserialization error: {}".format(e))
                 return None
