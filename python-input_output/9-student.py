@@ -5,7 +5,6 @@
 class Student:
     """Define Class Student"""
 
-
     def __init__(self, first_name, last_name, age):
         """
         Public methode that retrieves a dictionnary representation
