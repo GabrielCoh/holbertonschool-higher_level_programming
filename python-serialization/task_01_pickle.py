@@ -12,7 +12,7 @@ class CustomObject:
     def display(self):
         """The display used to print out the object's attributes"""
         for key in self.__dict__:
-            print("{}:{}".format(key.c  pitalize(), self.__dict__[key]))
+            print("{} : {}".format(key.c  pitalize(), self.__dict__[key]))
 
     def serialize(self, filename):
         """Serialize the Python dictionnary to the JSON file"""
