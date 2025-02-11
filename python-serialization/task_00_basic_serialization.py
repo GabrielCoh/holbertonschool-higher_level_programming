@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Basic serialization module that adds the functionality to serialize a Python dictionary to a JSON file and deserialize the JSON file to recreate the Python Dictionary"""
+"""Basic serialization module that adds the functionality to serialize a Python
+dictionary to a JSON file and deserialize the JSON file
+to recreate the Python Dictionary"""
 
 
 import json
