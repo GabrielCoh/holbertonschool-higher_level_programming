@@ -23,7 +23,7 @@ def fetch_and_print_posts():
         r = requests.get('https://jsonplaceholder.typicode.com/posts')
         if r.status_code == 200:
             posts = r.json()
-            data_to_save = [{'id': post['id'], 'title': post[title],
+            data_to_save = [{'id': post['id'], 'title': post['title'],
                             'body': post['body']} for post in posts]
 
             with open('posts.csv', 'w', newline='', encoding='utf-8') as
