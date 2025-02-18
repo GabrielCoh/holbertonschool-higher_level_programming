@@ -18,23 +18,24 @@ def fetch_and_print_posts():
     else:
         print("Failed to fetch posts.Status code: {}".format(r.status_code))
 
-
     def fetch_and_save_posts():
         """"""
         r = requests.get('https://jsonplaceholder.typicode.com/posts')
         if r.status_code == 200:
             posts = r.json()
             data_to_save = [{'id': post['id'], 'title': post[title],
-                        'body': post['body']} for post in posts]
+                            'body': post['body']} for post in posts]
 
-            with open('posts.csv', 'w', newline='', encoding='utf-8') as csvfile:
+            with open('posts.csv', 'w', newline='', encoding='utf-8') as
+            csvfile:
                 fieldnames = ['id', 'title', 'body']
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                 writer.writerheader()
                 writer.writerows(data_to_save)
         else:
-            print("Failed to fetch posts. Status code: {}".format(r.status_code))
+            print("Failed to fetch posts. Status code: {}".format
+                  (r.status_code))
 
     if __name__ == '__main__':
         fetch_and_print_posts()
