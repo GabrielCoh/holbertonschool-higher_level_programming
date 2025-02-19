@@ -12,7 +12,7 @@ users = {}
 @app.route('/')
 def home():
     """Return a str in root path"""
-    return "Welcome tothe Flask API !"
+    return "Welcome to the Flask API !"
 
 
 @app.route('/data')
