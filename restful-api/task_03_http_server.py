@@ -39,19 +39,19 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.send_text("Endpoint not found", 404)
 
 
-    def run_server(host="localhost", port=8000):
-        """Starts the server"""
-        with HTTPServer((host, port), RequestHandler) as web_server:
-            print("Starting server on http://{}:{}".format(host, port))
+def run_server(host="localhost", port=8000):
+    """Starts the server"""
+    with HTTPServer((host, port), RequestHandler) as web_server:
+        print("Starting server on http://{}:{}".format(host, port))
 
-            try:
-                web_server.serve_forever()
-            except KeyboardInterrupt:
-                pass
-            finally:
-                web_server.server_close()
-                print("\nServer stopped")
+        try:
+            web_server.serve_forever()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            web_server.server_close()
+            print("\nServer stopped")
 
 
-        if __name__ == "__main__":
-            run_server()
+if __name__ == "__main__":
+    run_server()
