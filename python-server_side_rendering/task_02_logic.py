@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+import json
+
 
 app = Flask(__name__)
 
@@ -22,7 +24,7 @@ def items():
     with open('items.json') as file:
         data = json.load(file)
     items_list = data.get('items', [])
-    return render_template('items.html', items=item_list)
+    return render_template('items.html', list=list)
 
 
 if __name__ == '__main__':
