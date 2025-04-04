@@ -1,7 +1,3 @@
-const header = document.querySelector('header');
-const clickRedButton = document.querySelector('#red_header');
-
-clickRedButton.addEventListener('click', () => {
-  header.classList.add ('red');
-}
-);
+document.querySelector('#red_header').addEventListener('click', () => {
+  document.querySelector('header').classList.add('red');
+})
